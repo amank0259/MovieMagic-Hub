@@ -3,4 +3,18 @@
 @tailwind utilities;
 
 /* primary - #1f1e24 */
-/* secondary - #6556cd */
+/* secondary - #277f8f */
+
+::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #201f1f;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #277f8f;
+    border-radius: 10px;
+}
