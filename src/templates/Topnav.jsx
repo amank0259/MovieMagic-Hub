@@ -22,7 +22,7 @@ function Topnav() {
 
 
     return (
-        <div className='w-full h-[10vh] relative flex justify-start items-center pl-[10%]'>
+        <div className='w-full h-[8vh] relative flex justify-start items-center pl-[10%]'>
             <i className="text-3xl text-zinc-300 ri-search-fill"></i>
             <input onChange={(e) => setSearch(e.target.value)} value={search} className='w-[50%] mx-10 p-5 text-xl outline-none border-none bg-transparent text-zinc-200' type='text' placeholder='search anything' />
             {search.length > 0 && (<i onClick={() => setSearch("")} className="text-zinc-300 text-2xl ri-close-fill"></i>)}
