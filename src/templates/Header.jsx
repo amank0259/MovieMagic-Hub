@@ -12,7 +12,9 @@ const Header = ({ data }) => {
             <h1 className='w-[70%] text-5xl font-black text-white'>{
                 data.name || data.original_name || data.original_title || data.title
             }</h1>
-            <p className='w-[70%] text-zinc-200 my-3'>{data.overview}</p>
+            <p className='w-[70%] text-zinc-200 my-3'>{data.overview.slice(0, 300)}...
+                <Link className='text-blue-400'>more</Link>
+            </p>
             <p className='text-zinc-400'>
                 <i className='text-yellow-500 ri-megaphone-fill'></i>
                 {data.release_date || 'NA'}
