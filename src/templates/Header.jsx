@@ -7,7 +7,7 @@ const Header = ({ data }) => {
             background: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url(https://image.tmdb.org/t/p/original/${data.backdrop_path || data.profile_path})`,
             backgroundPosition: "cente",
             backgroundSize: "cover"
-        }} className='w-full h-[50vh] flex flex-col justify-end items-start p-10'>
+        }} className='w-full h-[51vh] flex flex-col justify-end items-start p-10'>
 
             <h1 className='w-[70%] text-5xl font-black text-white'>{
                 data.name || data.original_name || data.original_title || data.title
