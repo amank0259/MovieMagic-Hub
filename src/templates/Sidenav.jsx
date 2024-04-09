@@ -12,7 +12,7 @@ function Sidenav() {
                 <h1 className='text-white font-semibold text-xl mt-10 mb-5'>
                     New Feed
                 </h1>
-                <Link className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
+                <Link to="/trending" className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
                     <i className="mr-1 group-hover:animate-bounce ri-fire-fill"></i>
                     Trending
                 </Link>
@@ -50,7 +50,7 @@ function Sidenav() {
                 </Link>
             </nav >
 
-        </div>
+        </div >
     )
 }
 
