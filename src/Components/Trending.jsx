@@ -53,7 +53,7 @@ function Trending() {
                 <h1 className='text-2xl font-semibold text-zinc-300'>
                     <i onClick={() => navigate(-1)} className='hover:text-secondary cursor-pointer ri-arrow-left-line pr-4'>
                     </i>
-                    Trending
+                    Trending {`(${category})`}
                 </h1>
                 <div className='flex items-center w-[80%]'>
                     <Topnav />
