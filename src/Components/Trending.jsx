@@ -19,7 +19,6 @@ function Trending() {
         try {
             const { data } = await axios.get(`/trending/${category}/${duration}?page=${page}`);
             // setTrending(data.results)
-            console.log(data);
             if (data.results.length > 0) {
                 setTrending((prev) => [...prev, ...data.results])
                 setPage(page + 1)
@@ -66,7 +65,7 @@ function Trending() {
 
             <InfiniteScroll
                 dataLength={trending.length}
-                next={() => setTimeout(() => getTrending(), 500)}
+                next={() => getTrending()}
                 hasMore
                 loader={<h1>Loading...</h1>}
             >
