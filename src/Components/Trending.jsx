@@ -12,22 +12,42 @@ function Trending() {
     const [category, setCategory] = useState("all");
     const [duration, setDuration] = useState("day");
     const [trending, setTrending] = useState([]);
-    const [page, setPage] = useState(1)
+    const [page, setPage] = useState(1);
+    const [hasMore, setHasMore] = useState(true)
 
     const getTrending = async () => {
         try {
-            const { data } = await axios.get(`/trending/${category}/${duration}`);
+            const { data } = await axios.get(`/trending/${category}/${duration}?page=${page}`);
             // setTrending(data.results)
-            setTrending((prev) => [...prev, ...data.results])
-            setPage(page + 1)
             console.log(data);
-        } catch (error) {
+            if (data.results.length > 0) {
+                setTrending((prev) => [...prev, ...data.results])
+                setPage(page + 1)
+            }
+            else {
+                setHasMore(false)
+            }
+        }
+        catch (error) {
             console.log("error:", error);
         }
     };
+
+    const refreshHandler = () => {
+        if (trending.length === 0) {
+            getTrending();
+        }
+        else {
+            setPage(1);
+            setTrending([]);
+            getTrending();
+        }
+    }
+
     useEffect(() => {
-        getTrending();
-    }, [duration, category])
+        refreshHandler();
+    }, [duration, category]);
+
     return trending.length > 0 ? (
         <div className='w-screen h-screen'>
             <div className='px-[3%] w-full flex items-center justify-between'>
@@ -47,7 +67,7 @@ function Trending() {
             <InfiniteScroll
                 dataLength={trending.length}
                 next={() => setTimeout(() => getTrending(), 500)}
-                hasMore={true}
+                hasMore
                 loader={<h1>Loading...</h1>}
             >
                 <Cards data={trending} title={category} />
