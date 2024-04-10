@@ -16,19 +16,19 @@ function Sidenav() {
                     <i className="mr-1 group-hover:animate-bounce ri-fire-fill"></i>
                     Trending
                 </Link>
-                <Link className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
+                <Link to="/popular" className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
                     <i className="mr-2 group-hover:animate-bounce ri-bard-fill"></i>
                     Popular
                 </Link>
-                <Link className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
+                <Link to="/movies" className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
                     <i className=" group-hover:animate-bounce ri-movie-2-fill mr-2"></i>
                     Movies
                 </Link>
-                <Link className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
+                <Link to="/tvShows" className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
                     <i className="mr-2 group-hover:animate-bounce ri-tv-2-fill"></i>
                     TV Shows
                 </Link>
-                <Link className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
+                <Link to="people" className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
                     <i className="mr-2 group-hover:animate-bounce ri-team-fill"></i>
                     People
                 </Link>
@@ -40,11 +40,11 @@ function Sidenav() {
                 <h1 className='text-white font-semibold text-xl mt-10 mb-5'>
                     Information
                 </h1>
-                <Link className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
+                <Link to="/about" className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
                     <i className="mr-2 group-hover:animate-bounce ri-information-fill"></i>
                     About
                 </Link>
-                <Link className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
+                <Link to="contact" className='hover:bg-secondary p-5 rounded-lg hover:text-white duration-300 flex flex-row group'>
                     <i className="mr-2 group-hover:animate-bounce ri-phone-fill"></i>
                     Contact
                 </Link>
