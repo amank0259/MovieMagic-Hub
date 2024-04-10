@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Cards({ data, title }) {
-    document.title = `Trending | ${title}`
+function Cards({ data, title, pageTitle }) {
+    document.title = `${pageTitle} | ${title}`
     return (
         <div className='flex flex-wrap w-full h-full px-[3%] bg-primary'>
             {data.map((item, index) => (
