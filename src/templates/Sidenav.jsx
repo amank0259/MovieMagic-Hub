@@ -5,7 +5,7 @@ function Sidenav() {
     return (
         <div className='w-[20%] h-full  border-r border-zinc-200 p-10'>
             <h1 className='text-2xl text-white font-bold'>
-                <i class="text-secondary ri-tv-fill mr-3"></i>
+                <i class="text-secondary ri-movie-2-fill mr-3"></i>
                 <span>Movie Magic Hub</span>
             </h1>
             < nav className='flex flex-col text-zinc-400 text-xl gap-3'>
