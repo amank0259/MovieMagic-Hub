@@ -6,7 +6,7 @@ function HorizontalCards({ data }) {
     return (
         <div className='w-[100%] h-[35vh] flex overflow-y-hidden mb-5 p-3'>
             {data.map((item, index) => (
-                <div key={index} className='min-w-[17%] bg-zinc-900 mr-5 overflow-hidden'>
+                <Link to={`/${item.media_type}/details/${item.id}`} key={index} className='min-w-[17%] bg-zinc-900 mr-5 overflow-hidden'>
                     <img
                         className='w-full object-cover rounded'
                         src={`https://image.tmdb.org/t/p/original/${item.backdrop_path || item.poster_path}`} alt="" />
@@ -18,7 +18,7 @@ function HorizontalCards({ data }) {
                             <Link className='text-zinc-500'>more</Link>
                         </p>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     )
