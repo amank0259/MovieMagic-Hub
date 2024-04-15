@@ -67,7 +67,7 @@ function Popular() {
                 hasMore
                 loader={<h1>Loading...</h1>}
             >
-                <Cards data={popular} pageTitle="Popular" title={category} />
+                <Cards data={popular} pageTitle="Popular" title={category} keyTitle="popular" />
             </InfiniteScroll>
 
         </div>
